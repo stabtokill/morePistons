@@ -44,9 +44,9 @@ public class BlockMorePistonMoving extends BlockContainer
     {
         TileEntity tileentity = par1World.getBlockTileEntity(par2, par3, par4);
 
-        if (tileentity instanceof TileEntityPiston)
+        if (tileentity instanceof TileEntityMorePiston)
         {
-            ((TileEntityPiston)tileentity).clearPistonTileEntity();
+            ((TileEntityMorePiston)tileentity).clearPistonTileEntity();
         }
         else
         {
@@ -126,7 +126,7 @@ public class BlockMorePistonMoving extends BlockContainer
     {
         if (!par1World.isRemote)
         {
-            TileEntityPiston tileentitypiston = this.getTileEntityAtLocation(par1World, par2, par3, par4);
+            TileEntityMorePiston tileentitypiston = this.getTileEntityAtLocation(par1World, par2, par3, par4);
 
             if (tileentitypiston != null)
             {
@@ -152,7 +152,7 @@ public class BlockMorePistonMoving extends BlockContainer
      */
     public static TileEntity getTileEntity(int par0, int par1, int par2, boolean par3, boolean par4)
     {
-        return new TileEntityPiston(par0, par1, par2, par3, par4);
+        return new TileEntityMorePiston(par0, par1, par2, par3, par4);
     }
 
     /**
@@ -161,7 +161,7 @@ public class BlockMorePistonMoving extends BlockContainer
      */
     public AxisAlignedBB getCollisionBoundingBoxFromPool(World par1World, int par2, int par3, int par4)
     {
-        TileEntityPiston tileentitypiston = this.getTileEntityAtLocation(par1World, par2, par3, par4);
+        TileEntityMorePiston tileentitypiston = this.getTileEntityAtLocation(par1World, par2, par3, par4);
 
         if (tileentitypiston == null)
         {
@@ -185,7 +185,7 @@ public class BlockMorePistonMoving extends BlockContainer
      */
     public void setBlockBoundsBasedOnState(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)
     {
-        TileEntityPiston tileentitypiston = this.getTileEntityAtLocation(par1IBlockAccess, par2, par3, par4);
+        TileEntityMorePiston tileentitypiston = this.getTileEntityAtLocation(par1IBlockAccess, par2, par3, par4);
 
         if (tileentitypiston != null)
         {
@@ -265,10 +265,10 @@ public class BlockMorePistonMoving extends BlockContainer
     /**
      * gets the piston tile entity at the specified location
      */
-    private TileEntityPiston getTileEntityAtLocation(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)
+    private TileEntityMorePiston getTileEntityAtLocation(IBlockAccess par1IBlockAccess, int par2, int par3, int par4)
     {
         TileEntity tileentity = par1IBlockAccess.getBlockTileEntity(par2, par3, par4);
-        return tileentity instanceof TileEntityPiston ? (TileEntityPiston)tileentity : null;
+        return tileentity instanceof TileEntityMorePiston ? (TileEntityMorePiston)tileentity : null;
     }
 
     @SideOnly(Side.CLIENT)

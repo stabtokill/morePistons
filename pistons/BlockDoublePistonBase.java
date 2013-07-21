@@ -254,9 +254,9 @@ public class BlockDoublePistonBase extends Block
                 {
                     TileEntity tileentity1 = par1World.getBlockTileEntity(j1, k1, l1);
 
-                    if (tileentity1 instanceof TileEntityPiston)
+                    if (tileentity1 instanceof TileEntityMorePiston)
                     {
-                        TileEntityPiston tileentitypiston = (TileEntityPiston)tileentity1;
+                        TileEntityMorePiston tileentitypiston = (TileEntityMorePiston)tileentity1;
 
                         if (tileentitypiston.getPistonOrientation() == par6 && tileentitypiston.isExtending())
                         {
