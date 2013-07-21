@@ -16,9 +16,9 @@ import net.minecraft.util.Facing;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockDoublePistonMoving extends BlockContainer
+public class BlockMorePistonMoving extends BlockContainer
 {
-    public BlockDoublePistonMoving(int par1)
+    public BlockMorePistonMoving(int par1)
     {
         super(par1, Material.piston);
         this.setHardness(-1.0F);

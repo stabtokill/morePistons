@@ -16,14 +16,14 @@ import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockDoublePistonExtension extends Block
+public class BlockMorePistonExtension extends Block
 {
     @SideOnly(Side.CLIENT)
 
     /** The texture for the 'head' of the piston. Sticky or normal. */
     private Icon headTexture;
 
-    public BlockDoublePistonExtension(int par1)
+    public BlockMorePistonExtension(int par1)
     {
         super(par1, Material.piston);
         this.setStepSound(soundStoneFootstep);

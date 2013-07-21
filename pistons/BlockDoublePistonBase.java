@@ -233,13 +233,13 @@ public class BlockDoublePistonBase extends Block
         {
             TileEntity tileentity = par1World.getBlockTileEntity(par2 + Facing.offsetsXForSide[par6], par3 + Facing.offsetsYForSide[par6], par4 + Facing.offsetsZForSide[par6]);
 
-            if (tileentity instanceof TileEntityPiston)
+            if (tileentity instanceof TileEntityMorePiston)
             {
-                ((TileEntityPiston)tileentity).clearPistonTileEntity();
+                ((TileEntityMorePiston)tileentity).clearPistonTileEntity();
             }
 
             par1World.setBlock(par2, par3, par4, Block.pistonMoving.blockID, par6, 3);
-            par1World.setBlockTileEntity(par2, par3, par4, BlockDoublePistonMoving.getTileEntity(this.blockID, par6, par6, false, true));
+            par1World.setBlockTileEntity(par2, par3, par4, BlockMorePistonMoving.getTileEntity(this.blockID, par6, par6, false, true));
 
             if (this.isSticky)
             {
