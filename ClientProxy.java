@@ -1,7 +1,7 @@
 package morePistons.morePistons;
 
 import net.minecraftforge.client.MinecraftForgeClient;
-import tutorial.generic.CommonProxy;
+import morePistons.morePistons.CommonProxy;
 
 public class ClientProxy extends CommonProxy {
         
