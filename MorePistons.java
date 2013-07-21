@@ -21,7 +21,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MorePistons {
 
-		public static final BlockDoublePistonBase doublePiston = new BlockDoublePistonBase(700, true);
+		public static final BlockDoublePistonBase doublePiston = new BlockDoublePistonBase(700, false);
 		
 		
 		
