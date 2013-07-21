@@ -21,13 +21,17 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MorePistons {
 	
-		public static final int idDoublePiston = 700;
-		public static final int idPistonExtension = 701;
-		public static final int idPistonMoving = 702;
-
-		public static final BlockDoublePistonBase doublePiston = new BlockDoublePistonBase(idDoublePiston, false);
+		public static final int idPistonExtension = 700;
+		public static final int idPistonMoving = 701;
+		public static final int idDoublePiston = 702;
+		public static final int idDoublePistonS = 703;
+		
+		
 		public static final BlockMorePistonExtension pistonExtension = new BlockMorePistonExtension(idPistonExtension);
 		public static final BlockMorePistonMoving pistonMoving = new BlockMorePistonMoving(idPistonMoving);
+		public static final BlockDoublePistonBase doublePiston = new BlockDoublePistonBase(idDoublePiston, false);
+		public static final BlockDoublePistonBase doublePistonS = new BlockDoublePistonBase(idDoublePistonS, true);
+		
 		
 		
 		  public static CreativeTabs tabPistons = new CreativeTabs("tabPistons") {
@@ -51,18 +55,33 @@ public class MorePistons {
         
         @EventHandler
         public void load(FMLInitializationEvent event) {
-                
+            proxy.registerRenderers();
+            
+        	LanguageRegistry.addName(pistonExtension, "Piston Extension");
+        	LanguageRegistry.addName(pistonMoving, "Piston Moving");
         	
         	
         	
-        	doublePiston.setCreativeTab(tabPistons);
         	LanguageRegistry.addName(doublePiston, "Double Piston");
+        	
+        	LanguageRegistry.addName(doublePistonS, "Double Sticky Piston");
+        	
         	
         	LanguageRegistry.instance().addStringLocalization("itemGroup.tabPistons", "en_US", "Pistons");
         	
         	
-        	proxy.registerRenderers();
+        	addCreativeTab();
+        	
         }
+        
+        
+        
+        public void addCreativeTab(){
+        	
+        	doublePiston.setCreativeTab(tabPistons);
+        	
+        }
+        
         
         @EventHandler
         public void postInit(FMLPostInitializationEvent event) {
