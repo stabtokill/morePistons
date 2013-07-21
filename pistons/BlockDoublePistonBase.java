@@ -33,7 +33,7 @@ public class BlockDoublePistonBase extends Block
     @SideOnly(Side.CLIENT)
 
     /** Only visible when piston is extended */
-    private Icon innerTopIcon;
+    private static Icon innerTopIcon;
     @SideOnly(Side.CLIENT)
 
     /** Bottom side texture */
@@ -41,7 +41,8 @@ public class BlockDoublePistonBase extends Block
     @SideOnly(Side.CLIENT)
 
     /** Top icon of piston depends on (either sticky or normal) */
-    private Icon topIcon;
+    private static Icon topIcon;
+    private static Icon blockIcon;
 
     public BlockDoublePistonBase(int par1, boolean par2)
     {
@@ -84,7 +85,7 @@ public class BlockDoublePistonBase extends Block
     @SideOnly(Side.CLIENT)
     public static Icon func_94496_b(String par0Str)
     {
-        return par0Str == "piston_side" ? Block.pistonBase.blockIcon : (par0Str == "piston_top_normal" ? Block.pistonBase.topIcon : (par0Str == "piston_top_sticky" ? Block.pistonStickyBase.topIcon : (par0Str == "piston_inner" ? Block.pistonBase.innerTopIcon : null)));
+        return par0Str == "piston_side" ? blockIcon : (par0Str == "piston_top_normal" ? topIcon : (par0Str == "piston_top_sticky" ? topIcon : (par0Str == "piston_inner" ? innerTopIcon : null)));
     }
 
     @SideOnly(Side.CLIENT)
