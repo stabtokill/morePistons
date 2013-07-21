@@ -48,7 +48,7 @@ public class BlockDoublePistonBase extends Block
         this.isSticky = par2;
         this.setStepSound(soundStoneFootstep);
         this.setHardness(0.5F);
-        this.setCreativeTab(CreativeTabs.tabRedstone);
+       // this.setCreativeTab(CreativeTabs.tabRedstone);
     }
 
     @SideOnly(Side.CLIENT)

@@ -71,7 +71,7 @@ public class BlockDoublePistonExtension extends Block
         {
             par6 = par1World.getBlockMetadata(par2, par3, par4);
 
-            if (DoublePiston.isExtended(par6))
+            if (BlockDoublePistonBase.isExtended(par6))
             {
                 Block.blocksList[k1].dropBlockAsItem(par1World, par2, par3, par4, par6, 0);
                 par1World.setBlockToAir(par2, par3, par4);
@@ -93,7 +93,7 @@ public class BlockDoublePistonExtension extends Block
     public Icon getIcon(int par1, int par2)
     {
         int k = getDirectionMeta(par2);
-        return par1 == k ? (this.headTexture != null ? this.headTexture : ((par2 & 8) != 0 ? DoublePiston.func_94496_b("piston_top_sticky") : DoublePiston.func_94496_b("piston_top_normal"))) : (k < 6 && par1 == Facing.oppositeSide[k] ? DoublePiston.func_94496_b("piston_top_normal") : DoublePiston.func_94496_b("piston_side"));
+        return par1 == k ? (this.headTexture != null ? this.headTexture : ((par2 & 8) != 0 ? BlockDoublePistonBase.func_94496_b("piston_top_sticky") : BlockDoublePistonBase.func_94496_b("piston_top_normal"))) : (k < 6 && par1 == Facing.oppositeSide[k] ? BlockDoublePistonBase.func_94496_b("piston_top_normal") : BlockDoublePistonBase.func_94496_b("piston_side"));
     }
 
     @SideOnly(Side.CLIENT)
