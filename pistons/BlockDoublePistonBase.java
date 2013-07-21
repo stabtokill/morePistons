@@ -6,6 +6,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import java.util.List;
 
+import morePistons.morePistons.MorePistons;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockPistonMoving;
 import net.minecraft.block.BlockSnow;
@@ -48,7 +49,7 @@ public class BlockDoublePistonBase extends Block
         this.isSticky = par2;
         this.setStepSound(soundStoneFootstep);
         this.setHardness(0.5F);
-       // this.setCreativeTab(CreativeTabs.tabRedstone);
+        this.setCreativeTab(CreativeTabs.tabRedstone);
     }
 
     @SideOnly(Side.CLIENT)
@@ -238,7 +239,7 @@ public class BlockDoublePistonBase extends Block
                 ((TileEntityMorePiston)tileentity).clearPistonTileEntity();
             }
 
-            par1World.setBlock(par2, par3, par4, Block.pistonMoving.blockID, par6, 3);
+            par1World.setBlock(par2, par3, par4, MorePistons.idPistonMoving, par6, 3);
             par1World.setBlockTileEntity(par2, par3, par4, BlockMorePistonMoving.getTileEntity(this.blockID, par6, par6, false, true));
 
             if (this.isSticky)
@@ -250,7 +251,7 @@ public class BlockDoublePistonBase extends Block
                 int j2 = par1World.getBlockMetadata(j1, k1, l1);
                 boolean flag1 = false;
 
-                if (i2 == Block.pistonMoving.blockID)
+                if (i2 == MorePistons.idPistonMoving)
                 {
                     TileEntity tileentity1 = par1World.getBlockTileEntity(j1, k1, l1);
 
@@ -268,13 +269,13 @@ public class BlockDoublePistonBase extends Block
                     }
                 }
 
-                if (!flag1 && i2 > 0 && canPushBlock(i2, par1World, j1, k1, l1, false) && (Block.blocksList[i2].getMobilityFlag() == 0 || i2 == Block.pistonBase.blockID || i2 == Block.pistonStickyBase.blockID))
+                if (!flag1 && i2 > 0 && canPushBlock(i2, par1World, j1, k1, l1, false) && (Block.blocksList[i2].getMobilityFlag() == 0 || i2 == MorePistons.idDoublePiston || i2 == MorePistons.idDoublePistonS))
                 {
                     par2 += Facing.offsetsXForSide[par6];
                     par3 += Facing.offsetsYForSide[par6];
                     par4 += Facing.offsetsZForSide[par6];
-                    par1World.setBlock(par2, par3, par4, Block.pistonMoving.blockID, j2, 3);
-                    par1World.setBlockTileEntity(par2, par3, par4, BlockPistonMoving.getTileEntity(i2, j2, par6, false, false));
+                    par1World.setBlock(par2, par3, par4, MorePistons.idPistonMoving, j2, 3);
+                    par1World.setBlockTileEntity(par2, par3, par4, BlockMorePistonMoving.getTileEntity(i2, j2, par6, false, false));
                     par1World.setBlockToAir(j1, k1, l1);
                 }
                 else if (!flag1)
@@ -418,7 +419,7 @@ public class BlockDoublePistonBase extends Block
         }
         else
         {
-            if (par0 != Block.pistonBase.blockID && par0 != Block.pistonStickyBase.blockID)
+            if (par0 != MorePistons.idDoublePiston && par0 != MorePistons.idDoublePistonS)
             {
                 if (Block.blocksList[par0].getBlockHardness(par1World, par2, par3, par4) == -1.0F)
                 {
@@ -567,13 +568,13 @@ public class BlockDoublePistonBase extends Block
 
                 if (k3 == this.blockID && l2 == par2 && i3 == par3 && j3 == par4)
                 {
-                    par1World.setBlock(i1, j1, k1, Block.pistonMoving.blockID, par5 | (this.isSticky ? 8 : 0), 4);
-                    par1World.setBlockTileEntity(i1, j1, k1, BlockPistonMoving.getTileEntity(Block.pistonExtension.blockID, par5 | (this.isSticky ? 8 : 0), par5, true, false));
+                    par1World.setBlock(i1, j1, k1, MorePistons.idPistonMoving, par5 | (this.isSticky ? 8 : 0), 4);
+                    par1World.setBlockTileEntity(i1, j1, k1, BlockMorePistonMoving.getTileEntity(MorePistons.idPistonExtension, par5 | (this.isSticky ? 8 : 0), par5, true, false));
                 }
                 else
                 {
-                    par1World.setBlock(i1, j1, k1, Block.pistonMoving.blockID, l3, 4);
-                    par1World.setBlockTileEntity(i1, j1, k1, BlockPistonMoving.getTileEntity(k3, l3, par5, true, false));
+                    par1World.setBlock(i1, j1, k1, MorePistons.idPistonMoving, l3, 4);
+                    par1World.setBlockTileEntity(i1, j1, k1, BlockMorePistonMoving.getTileEntity(k3, l3, par5, true, false));
                 }
 
                 aint[k2++] = k3;

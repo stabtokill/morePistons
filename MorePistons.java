@@ -2,7 +2,7 @@ package morePistons.morePistons;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
-import morePistons.morePistons.pistons.BlockDoublePistonBase;
+import morePistons.morePistons.pistons.*;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Init;
@@ -20,9 +20,14 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @Mod(modid="MorePistons", name="MorePistons", version="0.0.1")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class MorePistons {
+	
+		public static final int idDoublePiston = 700;
+		public static final int idPistonExtension = 701;
+		public static final int idPistonMoving = 702;
 
-		public static final BlockDoublePistonBase doublePiston = new BlockDoublePistonBase(700, false);
-		
+		public static final BlockDoublePistonBase doublePiston = new BlockDoublePistonBase(idDoublePiston, false);
+		public static final BlockMorePistonExtension pistonExtension = new BlockMorePistonExtension(idPistonExtension);
+		public static final BlockMorePistonMoving pistonMoving = new BlockMorePistonMoving(idPistonMoving);
 		
 		
 		  public static CreativeTabs tabPistons = new CreativeTabs("tabPistons") {
