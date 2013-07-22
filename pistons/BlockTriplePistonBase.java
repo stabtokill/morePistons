@@ -463,9 +463,7 @@ public class BlockTriplePistonBase extends BlockPistonBase{
 	                        i1 += Facing.offsetsXForSide[par5];
 	                        j1 += Facing.offsetsYForSide[par5];
 	                        k1 += Facing.offsetsZForSide[par5];
-	                        i1 += Facing.offsetsXForSide[par5];
-	                        j1 += Facing.offsetsYForSide[par5];
-	                        k1 += Facing.offsetsZForSide[par5];
+	                        
 	                        ++l1;
 	                        continue;
 	                    }
