@@ -85,6 +85,8 @@ public class MorePistons {
         
         
         public void addCreativeTab(){
+        	pistonExtension.setCreativeTab(tabPistons);
+        	pistonMoving.setCreativeTab(tabPistons);
         	
         	doublePiston.setCreativeTab(tabPistons);
         	
