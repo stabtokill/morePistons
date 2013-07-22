@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Random;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockPistonExtension;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
@@ -16,7 +17,7 @@ import net.minecraft.util.Icon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockMorePistonExtension extends Block
+public class BlockMorePistonExtension extends BlockPistonExtension
 {
     @SideOnly(Side.CLIENT)
 
@@ -25,7 +26,7 @@ public class BlockMorePistonExtension extends Block
 
     public BlockMorePistonExtension(int par1)
     {
-        super(par1, Material.piston);
+        super(par1);
         this.setStepSound(soundStoneFootstep);
         this.setHardness(0.5F);
     }

@@ -337,6 +337,7 @@ public class BlockTriplePistonBase extends BlockPistonBase{
 	     */
 	    private static boolean canPushBlock(int par0, World par1World, int par2, int par3, int par4, boolean par5)
 	    {
+	    	System.out.println("sdafffffffffffffffffffffffffff");
 	        if (par0 == Block.obsidian.blockID)
 	        {
 	            return false;
@@ -459,6 +460,9 @@ public class BlockTriplePistonBase extends BlockPistonBase{
 	                            return false;
 	                        }
 
+	                        i1 += Facing.offsetsXForSide[par5];
+	                        j1 += Facing.offsetsYForSide[par5];
+	                        k1 += Facing.offsetsZForSide[par5];
 	                        i1 += Facing.offsetsXForSide[par5];
 	                        j1 += Facing.offsetsYForSide[par5];
 	                        k1 += Facing.offsetsZForSide[par5];

@@ -3,8 +3,10 @@ package morePistons.morePistons;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemCoal;
 import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
 import morePistons.morePistons.pistons.*;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.Block;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -36,6 +38,7 @@ public class MorePistons {
 		public static final BlockDoublePistonBase doublePiston = new BlockDoublePistonBase(idDoublePiston, false);
 		public static final BlockDoublePistonBase doublePistonS = new BlockDoublePistonBase(idDoublePistonS, true);
 		public static final BlockTriplePistonBase triplePiston = new BlockTriplePistonBase(idTriplePiston, false);
+		//public static final Block triplePistonS = new BlockTriplePistonBase(705, false);
 		
 		
 		
@@ -73,6 +76,7 @@ public class MorePistons {
         	LanguageRegistry.addName(doublePistonS, "Double Sticky Piston");
         	
         	LanguageRegistry.addName(triplePiston, "Triple Piston");
+        	GameRegistry.registerBlock(triplePiston, "Triple Pistons");
         	
         	
         	LanguageRegistry.instance().addStringLocalization("itemGroup.tabPistons", "en_US", "Pistons");
@@ -99,4 +103,10 @@ public class MorePistons {
         public void postInit(FMLPostInitializationEvent event) {
                 // Stub Method
         }
+        
+        
+    	public static TileEntity getTileEntity(int par1, int par2, int par3, boolean par4, boolean par5) {
+    		return new TileEntityMorePiston(par1, par2, par3, par4, par5);
+    	}
+
 }

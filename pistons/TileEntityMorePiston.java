@@ -11,10 +11,11 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityPiston;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.Facing;
 
-public class TileEntityMorePiston extends TileEntity
+public class TileEntityMorePiston extends TileEntityPiston
 {
     private int storedBlockID;
     private int storedMetadata;
