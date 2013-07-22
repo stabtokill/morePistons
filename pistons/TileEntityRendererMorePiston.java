@@ -54,9 +54,9 @@ public class TileEntityRendererMorePiston extends TileEntitySpecialRenderer
             }
             else if (par1TileEntity.shouldRenderHead() && !par1TileEntity.isExtending())
             {
-                Block.pistonExtension.setHeadTexture(((BlockPistonBase)block).getPistonExtensionTexture());
-                this.blockRenderer.renderPistonExtensionAllFaces(Block.pistonExtension, par1TileEntity.xCoord, par1TileEntity.yCoord, par1TileEntity.zCoord, par1TileEntity.getProgress(par8) < 0.5F);
-                Block.pistonExtension.clearHeadTexture();
+                MorePistons.pistonExtension.setHeadTexture(((BlockPistonBase)block).getPistonExtensionTexture());
+                this.blockRenderer.renderPistonExtensionAllFaces(MorePistons.pistonExtension, par1TileEntity.xCoord, par1TileEntity.yCoord, par1TileEntity.zCoord, par1TileEntity.getProgress(par8) < 0.5F);
+                MorePistons.pistonExtension.clearHeadTexture();
                 tessellator.setTranslation((double)((float)par2 - (float)par1TileEntity.xCoord), (double)((float)par4 - (float)par1TileEntity.yCoord), (double)((float)par6 - (float)par1TileEntity.zCoord));
                 this.blockRenderer.renderPistonBaseAllFaces(block, par1TileEntity.xCoord, par1TileEntity.yCoord, par1TileEntity.zCoord);
             }
