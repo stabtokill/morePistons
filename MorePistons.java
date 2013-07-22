@@ -1,6 +1,7 @@
 package morePistons.morePistons;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemCoal;
 import net.minecraft.item.ItemStack;
 import morePistons.morePistons.pistons.*;
 import cpw.mods.fml.common.Mod;
@@ -15,7 +16,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+
 
 @Mod(modid="MorePistons", name="MorePistons", version="0.0.1")
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
@@ -63,6 +66,7 @@ public class MorePistons {
         	
         	
         	LanguageRegistry.addName(doublePiston, "Double Piston");
+        	GameRegistry.addRecipe(new ItemStack(doublePiston), "dd", 'd', ItemCoal.coal);
         	
         	LanguageRegistry.addName(doublePistonS, "Double Sticky Piston");
         	

@@ -96,10 +96,12 @@ public class BlockDoublePistonBase extends Block
      */
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.blockIcon = par1IconRegister.registerIcon("piston_side");
+    	//so far it gets called but wrong file path
+    	System.out.println("fdsafsadfasfasdfasdfasdf");// test code to see if function gets called
+        this.blockIcon = par1IconRegister.registerIcon("piston_double_side");
         this.topIcon = par1IconRegister.registerIcon(this.isSticky ? "piston_top_sticky" : "piston_top_normal");
-        this.innerTopIcon = par1IconRegister.registerIcon("piston_inner");
-        this.bottomIcon = par1IconRegister.registerIcon("piston_bottom");
+        this.innerTopIcon = par1IconRegister.registerIcon("piston_double_inner");
+        this.bottomIcon = par1IconRegister.registerIcon("piston_double_bottom");
     }
 
     /**
