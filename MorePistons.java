@@ -66,14 +66,17 @@ public class MorePistons {
             proxy.registerRenderers();
             
         	LanguageRegistry.addName(pistonExtension, "Piston Extension");
+        	GameRegistry.registerBlock(pistonExtension, "null");
         	LanguageRegistry.addName(pistonMoving, "Piston Moving");
-        	
+        	GameRegistry.registerBlock(pistonMoving, "null");
         	
         	
         	LanguageRegistry.addName(doublePiston, "Double Piston");
+        	GameRegistry.registerBlock(doublePiston, "Double Piston");
         	GameRegistry.addRecipe(new ItemStack(doublePiston), "dd", 'd', ItemCoal.coal);
         	
         	LanguageRegistry.addName(doublePistonS, "Double Sticky Piston");
+        	GameRegistry.registerBlock(doublePistonS, "Double Sticky Piston");
         	
         	LanguageRegistry.addName(triplePiston, "Triple Piston");
         	GameRegistry.registerBlock(triplePiston, "Triple Pistons");
