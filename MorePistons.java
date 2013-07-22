@@ -28,12 +28,14 @@ public class MorePistons {
 		public static final int idPistonMoving = 701;
 		public static final int idDoublePiston = 702;
 		public static final int idDoublePistonS = 703;
+		public static final int idTriplePiston = 704;
 		
 		
 		public static final BlockMorePistonExtension pistonExtension = new BlockMorePistonExtension(idPistonExtension);
 		public static final BlockMorePistonMoving pistonMoving = new BlockMorePistonMoving(idPistonMoving);
 		public static final BlockDoublePistonBase doublePiston = new BlockDoublePistonBase(idDoublePiston, false);
 		public static final BlockDoublePistonBase doublePistonS = new BlockDoublePistonBase(idDoublePistonS, true);
+		public static final BlockTriplePistonBase triplePiston = new BlockTriplePistonBase(idTriplePiston, false);
 		
 		
 		
@@ -70,6 +72,8 @@ public class MorePistons {
         	
         	LanguageRegistry.addName(doublePistonS, "Double Sticky Piston");
         	
+        	LanguageRegistry.addName(triplePiston, "Triple Piston");
+        	
         	
         	LanguageRegistry.instance().addStringLocalization("itemGroup.tabPistons", "en_US", "Pistons");
         	
@@ -83,6 +87,8 @@ public class MorePistons {
         public void addCreativeTab(){
         	
         	doublePiston.setCreativeTab(tabPistons);
+        	
+        	triplePiston.setCreativeTab(tabPistons);
         	
         }
         
