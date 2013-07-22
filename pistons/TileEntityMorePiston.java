@@ -5,6 +5,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import morePistons.morePistons.MorePistons;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NBTTagCompound;
@@ -100,7 +102,7 @@ public class TileEntityMorePiston extends TileEntity
             --par1;
         }
 
-        AxisAlignedBB axisalignedbb = Block.pistonMoving.getAxisAlignedBB(this.worldObj, this.xCoord, this.yCoord, this.zCoord, this.storedBlockID, par1, this.storedOrientation);
+        AxisAlignedBB axisalignedbb = MorePistons.pistonMoving.getAxisAlignedBB(this.worldObj, this.xCoord, this.yCoord, this.zCoord, this.storedBlockID, par1, this.storedOrientation);
 
         if (axisalignedbb != null)
         {
@@ -151,7 +153,7 @@ public class TileEntityMorePiston extends TileEntity
             this.worldObj.removeBlockTileEntity(this.xCoord, this.yCoord, this.zCoord);
             this.invalidate();
 
-            if (this.worldObj.getBlockId(this.xCoord, this.yCoord, this.zCoord) == Block.pistonMoving.blockID)
+            if (this.worldObj.getBlockId(this.xCoord, this.yCoord, this.zCoord) == MorePistons.idPistonMoving)
             {
                 this.worldObj.setBlock(this.xCoord, this.yCoord, this.zCoord, this.storedBlockID, this.storedMetadata, 3);
                 this.worldObj.notifyBlockOfNeighborChange(this.xCoord, this.yCoord, this.zCoord, this.storedBlockID);
@@ -173,7 +175,7 @@ public class TileEntityMorePiston extends TileEntity
             this.worldObj.removeBlockTileEntity(this.xCoord, this.yCoord, this.zCoord);
             this.invalidate();
 
-            if (this.worldObj.getBlockId(this.xCoord, this.yCoord, this.zCoord) == Block.pistonMoving.blockID)
+            if (this.worldObj.getBlockId(this.xCoord, this.yCoord, this.zCoord) == MorePistons.idPistonMoving)
             {
                 this.worldObj.setBlock(this.xCoord, this.yCoord, this.zCoord, this.storedBlockID, this.storedMetadata, 3);
                 this.worldObj.notifyBlockOfNeighborChange(this.xCoord, this.yCoord, this.zCoord, this.storedBlockID);

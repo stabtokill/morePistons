@@ -7,6 +7,7 @@ public class BlockTriplePistonBase extends BlockPistonBase{
 	public BlockTriplePistonBase(int par1, boolean par2) {
 		super(par1, par2);
 		
+		
 	}
 
 }
