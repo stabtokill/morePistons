@@ -66,9 +66,9 @@ public class MorePistons {
             proxy.registerRenderers();
             
         	LanguageRegistry.addName(pistonExtension, "Piston Extension");
-        	GameRegistry.registerBlock(pistonExtension, "null");
+        	GameRegistry.registerBlock(pistonExtension, "Extension");
         	LanguageRegistry.addName(pistonMoving, "Piston Moving");
-        	GameRegistry.registerBlock(pistonMoving, "null");
+        	GameRegistry.registerBlock(pistonMoving, "Moving");
         	
         	
         	LanguageRegistry.addName(doublePiston, "Double Piston");
